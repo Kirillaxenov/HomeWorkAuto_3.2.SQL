@@ -19,7 +19,7 @@ public class DataMySql {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "pass");
     }
 
-    public static DataHelper. AuthCode getVerificationCode() {
+    public static DataHelper.AuthCode getVerificationCode() {
         var codeSQL = "SELECT code FROM auth_codes ORDER BY created DESC LIMIT 1";
         try (var conn = getConn()) {
             return runner.query(conn, codeSQL, new BeanHandler<>(DataHelper.AuthCode.class));

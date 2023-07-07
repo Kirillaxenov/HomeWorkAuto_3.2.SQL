@@ -25,7 +25,7 @@ public class DataHelper {
     }
 
     private static String generateLogin() {
-        return faker.name().username();
+        return faker.elderScrolls().firstName();
     }
 
     private static String generatePassword() {
